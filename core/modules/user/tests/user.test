@@ -2080,7 +2080,7 @@ class UserEditTestCase extends BackdropWebTestCase {
     $this->backdropLogin($user1);
 
     // Test that multiple failed password validations trigger flood control.
-    config_set('user.flood', 'failed_login_limit', 2);
+    config_set('user.flood', 'flood_user_limit', 2);
     flood_clear_event('failed_pass_validation_user', $user1->uid);
     $edit = array();
     $edit['mail'] = $this->randomName() . '@new.example.com';
