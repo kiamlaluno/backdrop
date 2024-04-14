@@ -2092,7 +2092,7 @@ class UserEditTestCase extends BackdropWebTestCase {
     $this->assertRaw(t("Your current password is missing or incorrect; it's required to change the %name.", array('%name' => t('E-mail address'))));
     // For the third attempt error from the flood control is received.
     $this->backdropPost("user/$user1->uid/edit", $edit, t('Save'));
-    $this->assertRaw(t('Sorry, you have entered incorrect password more than @count times. Changes to fields that require current password are temporarily blocked. Try again later.', array('@count' => variable_get('user_failed_login_user_limit', 2))));
+    $this->assertRaw(t('Sorry, you have entered the incorrect password more than @count times. Changes to fields that require current password are temporarily blocked. Try again later.', array('@count' => variable_get('user_failed_login_user_limit', 2))));
 
     // Test that multiple failed password validations with an empty password
     // does not trigger flood control.
