@@ -428,11 +428,12 @@ function user_validate_picture(&$form, &$form_state) {
  * Generate a random alphanumeric password.
  */
 function user_password($length = 10) {
+  // cSpell:ignore abcdefghijkmnopqrstuvwxyz, ABCDEFGHJKLMNPQRSTUVWXYZ, 23456789
+
   // This variable contains the list of allowable characters for the
   // password. Note that the number 0 and the letter 'O' have been
   // removed to avoid confusion between the two. The same is true
   // of 'I', 1, and 'l'.
-  // cSpell:ignore abcdefghijkmnopqrstuvwxyz
   $allowable_characters = 'abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 
   // Zero-based count of characters in the allowable list:
