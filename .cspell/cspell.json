@@ -77,6 +77,10 @@
       "ignoreWords": ["NONEXISTINGFILENAME", "ufail"]
     },
     {
+      "filename": "/core/modules/user/user.module",
+      "ignoreWords": ["abcdefghijkmnopqrstuvwxyz", "ABCDEFGHJKLMNPQRSTUVWXYZ", "23456789"]
+    },
+    {
       "filename": "/core/themes/bartik/color/color.inc",
       "ignoreWords": ["Blackdrop"]
     }
