@@ -2430,11 +2430,11 @@ function system_get_debug_info() {
       // Add a suffix with the editor version or the editor library version
       // to the editor label.
       if (!empty($editor['library_version'])) {
-        $editor_label .= ' ' . t('version: @version', array('@version' => $editor['library_version']);
+        $editor_label .= ' ' . t('version: @version', array('@version' => $editor['library_version']));
       }
       elseif (isset($modules[$editor['module']]->info['version'])) {
         $editor_label .= ' ' . t('version: @version', array(
-          '@version' => $modules[$editor['module']]->info['version']
+          '@version' => $modules[$editor['module']]->info['version'],
         );
       }
       $text_editor_usage[$editor_label][] = $format_info->name;
