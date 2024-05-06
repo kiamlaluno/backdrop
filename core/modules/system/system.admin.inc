@@ -2435,7 +2435,7 @@ function system_get_debug_info() {
       elseif (isset($modules[$editor['module']]->info['version'])) {
         $editor_label .= ' ' . t('version: @version', array(
           '@version' => $modules[$editor['module']]->info['version'],
-        );
+        ));
       }
       $text_editor_usage[$editor_label][] = $format_info->name;
     }
