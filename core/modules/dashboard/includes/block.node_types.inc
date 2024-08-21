@@ -113,13 +113,11 @@ class DashboardContentTypesBlock extends Block {
       '#rows' => $rows,
     );
 
-    if ($access) {
-      $panel['link'] = array(
-        '#theme' => 'link',
-        '#path' => 'admin/structure/types',
-        '#text' => t('Manage content types'),
-      );
-    }
+    $panel['link'] = array(
+      '#theme' => 'link',
+      '#path' => 'admin/structure/types',
+      '#text' => t('Manage content types'),
+    );
 
     return $panel;
   }
