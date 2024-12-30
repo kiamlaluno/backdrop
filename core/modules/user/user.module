@@ -1056,8 +1056,8 @@ function user_validate_current_pass(&$form, &$form_state) {
       // Default is to allow 5 failed passwords validations every 6 hours to
       // prevent brute force attacks.
       $identifier = $account->uid;
-      $pass_reset_window = $flood_config->get('flood_user_window', 21600);
-      $pass_reset_limit = $flood_config->get('flood_user_limit', 5);
+      $pass_reset_window = $flood_config->get('flood_user_window');
+      $pass_reset_limit = $flood_config->get('flood_user_limit');
       if (!flood_is_allowed('failed_pass_validation_user', $pass_reset_limit, $pass_reset_window, $identifier)) {
         form_set_error('current_pass',
           format_plural($pass_reset_limit,
